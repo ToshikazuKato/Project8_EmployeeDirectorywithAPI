@@ -48,13 +48,24 @@ h3,p{
   border-radius: 5px;
   border: 1px solid rgb(48, 48, 48);
   padding: 10px;
-  width: 95%;
+  width: 270px;
   background-color: #fff;
   display: flex;
   justify-content: space-around;
   align-items: center;
   cursor: pointer;
   color: rgb(48, 48, 48);
+  transition: all 0.3s ease-in-out;
+}
+
+/* hover effect */
+.employee:hover{
+  border: 3px solid rgb(92, 133, 255);
+  transform: scale(1.1);
+}
+
+.employee:focus{
+  outline: 0;
 }
 
 .modal{
@@ -119,6 +130,7 @@ h3,p{
 
   .employee{
     width: 40vw;
+    height: 90px;
   }
 
   .modal{
@@ -139,6 +151,7 @@ h3,p{
 
   .employee{
     width: 28vw;
+    height: 105px;
   }
 
 }

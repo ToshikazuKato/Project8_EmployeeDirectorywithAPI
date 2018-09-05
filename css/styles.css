@@ -10,14 +10,16 @@ header{
   margin-top: 5vh;
 }
 
-a{
-  text-decoration: none;
-}
-
 h3,p{
   margin: 0;
 }
 
+hr{
+  display: inline-block;
+  width: 80%;
+}
+
+/* header section */
 .title{
   text-align: center;
   margin: 0;
@@ -32,10 +34,7 @@ h3,p{
   display: block;
 }
 
-#search::placeholder{
-
-}
-
+/* main section */
 #directory{
   display: flex;
   justify-content: space-around;
@@ -49,6 +48,7 @@ h3,p{
   border: 1px solid rgb(48, 48, 48);
   padding: 10px;
   width: 270px;
+  margin-bottom: 10px;
   background-color: #fff;
   display: flex;
   justify-content: space-around;
@@ -58,31 +58,16 @@ h3,p{
   transition: all 0.3s ease-in-out;
 }
 
-/* hover effect */
-.employee:hover{
-  border: 3px solid rgb(92, 133, 255);
-  transform: scale(1.1);
-}
-
-.employee:focus{
-  outline: 0;
-}
-
-.modal{
-  margin-top: 5px;
-  margin-bottom: 5px;
+.img{
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
 }
 
 .right{
   margin-left: 15px;
   width: 75%;
   text-align: center;
-}
-
-.img{
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
 }
 
 .name{
@@ -95,8 +80,62 @@ h3,p{
   font-size: 12px;
 }
 
-@media screen and (min-width:768px) {
+/* hover effect */
+.employee:hover{
+  border: 3px solid rgb(92, 133, 255);
+  transform: scale(1.1);
+}
 
+.employee:focus{
+  outline: 0;
+}
+
+/* modal section */
+.modalContainer{
+  display: none;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+}
+
+.modalContent{
+  border-radius: 5px;
+  background-color: #fefefe;
+  margin: auto 0;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 63%;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.span{
+  color: #aaaaaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close{
+  float: right;
+}
+
+.prev{
+  margin-left: 5px;
+}
+
+.next{
+  margin-right: 5px;
+}
+
+@media screen and (min-width:768px) {
+  /* header section */
   header{
     display: flex;
     justify-content: space-around;
@@ -123,6 +162,7 @@ h3,p{
     font-size: 16px;
   }
 
+  /* main section */
   #directory{
     flex-direction: row;
     flex-wrap: wrap;
@@ -131,27 +171,27 @@ h3,p{
   .employee{
     width: 40vw;
     height: 90px;
+    margin-bottom: 15px;
   }
 
-  .modal{
-    margin-top: 25px;
-  }
-
-  .modalContainer{
-    text-align: center;
-  }
-
-  .modaal-container{
-    width: 35%;
-  }
 
 }
 
 @media screen and (min-width:1024px) {
 
+  /* main section */
   .employee{
     width: 28vw;
     height: 105px;
+    margin-bottom: 20px;
+  }
+
+  .modalContent{
+    width: 50%;
+  }
+
+  .span{
+    font-size: 34px;
   }
 
 }

@@ -13,7 +13,12 @@
   const createEmployee = (empArr) =>{
     let empHTML = '';
     empArr.forEach( emp => {
-    const empName = emp.name.first+emp.name.last;
+    const name = emp.name.first+' '+emp.name.last;
+    // capitalize first letter of firstname and lastname
+    const empName = name.split(' ').map(word => {
+      return word[0].toUpperCase() + word.substr(1);
+    }).join(' ');
+
     empHTML += `  <div class="employee">
                     <img src="${emp.picture.medium}" alt="${empName}" class="img">
                     <div class="right">
